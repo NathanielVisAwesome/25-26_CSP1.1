@@ -13,7 +13,7 @@ def move():
   robot.dot(10)
   robot.fd(50)
 
-def turn_left():
+def left():
   robot.speed(0)
   robot.lt(90)
   robot.speed(2)
@@ -43,9 +43,43 @@ wn.bgpic("maze1.png") # other file names should be maze2.png, maze3.png
 # move robot forward with move()
 # turn robot left with turn_left()
 # sample for loop:
+
+#Solution for Maze 1
+'''for x in range (4):
+    move()
+for x in range (3):
+    left()
+for x in range (4):
+    move()
 '''
-for step in range(3): # forward 3
-  move()
+
+#Solution for Maze 2
+'''for x in range(3):
+    move()
+
+for x in range(3):
+    left()
+
+for x in range(2):
+    move()
+
+'''
+
+#Solution for Maze 3
+'''move()
+for x in range (3):
+    left()
+for x in range (2):
+    move()
+left()
+for x in range (2):
+    move()
+for x in range (3):
+    left()
+for x in range (2):
+    move()
+left()
+move()
 '''
 
 #---- end robot movement
