@@ -37,7 +37,7 @@ robot.speed(2)
 robot.showturtle()
 
 #---- TODO: change maze here
-wn.bgpic("maze1.png") # other file names should be maze2.png, maze3.png
+wn.bgpic("maze3.png") # other file names should be maze2.png, maze3.png
 
 #---- TODO: begin robot movement here
 # move robot forward with move()
@@ -65,7 +65,7 @@ for x in range(2):
 
 '''
 
-#Solution for Maze 3
+#Solution for Maze 3 v1
 '''move()
 for x in range (3):
     left()
@@ -81,6 +81,37 @@ for x in range (2):
 left()
 move()
 '''
+
+y = 9999999999
+
+for x in range (y):
+    move()
+    for x in range (3):
+        left()
+    for x in range (2):
+        move()
+    left()
+    for x in range (2):
+        move()
+    for x in range (3):
+        left()
+    for x in range (2):
+        move()
+    for x in range (2):
+        left()
+        move()
+    left()
+    for x in range (3):
+        move()
+    for x in range (3):
+        left()
+    for x in range (2):
+        move()
+    left()
+    move()
+    for x in range (3):
+        left()
+    move()
 
 #---- end robot movement
 
