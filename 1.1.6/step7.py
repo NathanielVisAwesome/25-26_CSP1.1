@@ -10,20 +10,24 @@ spdr.pensize(40)
 spdr.circle(20)
 
 #leg variables
-legs = 8 #num of legs
+legsL = 4 #num of left legs
+legsR = 4 #num of right legs
+legs = 8 #num of total legs
 legdist = 70 #leg distance
 space = 320 / legs #sets spacing between the leg
 spdr.pensize(5)
 inc = 0 #increment of distance between legs
 
 #draws the legs
-while inc < legs/2:
+leg = 0
+radius = 60
+while leg < legs:
   spdr.goto(0,20)
-  spdr.setheading(space*inc) #change leg direction
-  spdr.forward(legdist)
-  inc = inc + 1 #incrememnnt idk
-spdr.setheading(180)
-while inc < legs and not inc < 4:
+  if leg < 4:
+      spdr.setheading(space*inc) #change leg direction
+      spdr.forward(legdist)
+      inc = inc + 1 #incrememnnt idk
+  else:
     spdr.goto(0, 20)
     spdr.setheading(space*inc)
     spdr.forward(legdist)

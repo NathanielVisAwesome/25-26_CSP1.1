@@ -7,9 +7,24 @@ ladybug = trtl.Turtle()
 ladybug.pensize(40)
 ladybug.circle(5)
 
+#legs config
+legs = 6 #num of legs
+legdist = 50 #leg distance
+space = 360 / legs #sets spacing between the leg
+ladybug.pensize(5)
+inc = 0 #increment of distance between legs
+
+#drawlegs
+while inc < legs:
+  ladybug.goto(0,-45)
+  print(ladybug.pos())
+  ladybug.setheading(space*inc) #change leg direction
+  ladybug.forward(legdist)
+  inc = inc + 1 #incrememnnt idk
+
 # and body
 ladybug.penup()
-ladybug.goto(0, -55)
+ladybug.goto(-17,-45)
 ladybug.color("red")
 ladybug.pendown()
 ladybug.pensize(40)
