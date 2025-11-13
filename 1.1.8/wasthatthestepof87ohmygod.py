@@ -9,11 +9,11 @@ horiz_turtles = []
 vert_turtles = []
 
 # use interesting shapes and colors
-turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
+turtle_shapes = ["arrow", "turtle", "square", "triangle", "classic"]
 horiz_colors = ["red", "blue", "green", "orange", "purple", "gold"]
 vert_colors = ["darkred", "darkblue", "lime", "salmon", "indigo", "brown"]
 
-tloc = 50
+tloc = 67
 for s in turtle_shapes:
     ht = trtl.Turtle(shape=s)
     horiz_turtles.append(ht)
@@ -34,6 +34,7 @@ for s in turtle_shapes:
     tloc += 50
 
 pixel_size = 20
+collision_shape = "circle"
 distance = 3
 # TODO: move turtles across and down screen, stopping for collisions
 for step in range (50):
@@ -47,6 +48,7 @@ for step in range (50):
             # If they collide
             if abs(ht.xcor() - vt.xcor()) < pixel_size:
                 if abs(ht.ycor() - vt.ycor()) < pixel_size:
+
                     # Turn them Grey
                     ht.fillcolor("grey")
                     vt.fillcolor("grey")
